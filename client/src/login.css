@@ -1,0 +1,70 @@
+
+
+
+.login-tela {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(4px);
+   background: rgba(0, 80, 0, 0.20);
+}
+
+/* caixa do login */
+.login-form {
+  background: #7aae7dbd; 
+  padding: 30px;
+  border-radius: 16px;
+  width: 320px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+/* titulo */
+.login-form h2 {
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+/* inputs */
+.login-form .campo {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 1.4px solid #b9e0c3;
+  outline: none;
+  background: #e9f9ed;
+  transition: 0.2s ease;
+}
+
+.login-form .campo:focus {
+  border-color: #2e8b57;
+  background: #fff;
+}
+
+/* botão de login */
+.botao-login {
+  width: 100%;
+  padding: 12px 0;
+  background: #17412a;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.botao-login:hover {
+  background: #267248;
+  transform: scale(1.03);
+}
+
+/* mensagem de erro */
+.erro {
+  color: #e74c3c;
+  margin-bottom: 10px;
+  font-weight: 600;
+}

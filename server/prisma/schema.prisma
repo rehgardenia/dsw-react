@@ -1,0 +1,17 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Filme {
+  id          String @id @default(auto()) @map("_id") @db.ObjectId
+  titulo      String
+  status      String
+  resenha     String
+  nota        Int?
+  icone       String?
+}
