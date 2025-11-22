@@ -1,3 +1,4 @@
+// Importações principais
 import { useState, useEffect } from "react";
 import "../app.css";
 
@@ -19,7 +20,7 @@ export default function ModalFilme({ fechar, salvar, filmeEditando }) {
 
     }
   }, [filmeEditando]);
-
+// Transforma o arquivo em uma url blob 
   function handleIcone(e) {
     const file = e.target.files[0];
     if (!file) return;
@@ -27,6 +28,7 @@ export default function ModalFilme({ fechar, salvar, filmeEditando }) {
     setIcone(url);
   }
 
+// Verifica titulo para salvar o filme
   function handleSalvar() {
     if (!titulo.trim()) return alert("Digite o titulo do filme!");
 
@@ -49,7 +51,7 @@ export default function ModalFilme({ fechar, salvar, filmeEditando }) {
           {icone ? (
             <img src={icone} className="icone-redondo" alt="Ícone" />
           ) : (
-            <div className="icone-placeholder">Sem imagem</div>
+            <div className="icone-placeholder">Sem imagem</div> 
           )}
           <input type="file" accept="image/*" onChange={handleIcone} />
         </div>
@@ -70,7 +72,7 @@ export default function ModalFilme({ fechar, salvar, filmeEditando }) {
           className="campo"
           min="0"
           max="10"
-          value={nota}
+          value={nota || null}
           onChange={(e) => setNota(e.target.value)}
         />
 

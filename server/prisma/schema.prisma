@@ -12,6 +12,6 @@ model Filme {
   titulo      String
   status      String
   resenha     String
-  nota        Int?
+  nota        String?
   icone       String?
 }
